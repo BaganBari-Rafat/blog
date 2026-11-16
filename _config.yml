@@ -1,0 +1,18 @@
+title: My Blog
+description: Stories, photos and ideas.
+url: "https://baganbari-rafat.github.io"
+baseurl: "/blog"
+timezone: Asia/Dhaka
+markdown: kramdown
+paginate: 6
+paginate_path: "/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+# Comments (Giscus). Fill these 3 values after setup, see steps. Leave empty to hide comments.
+giscus:
+  repo: "BaganBari-Rafat/blog"
+  repo_id: ""
+  category: "Announcements"
+  category_id: ""

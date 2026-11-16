@@ -1,0 +1,23 @@
+---
+layout: default
+title: Home
+---
+<h1 class="lead">{{ site.description }}</h1>
+{% for post in paginator.posts %}
+<article class="card">
+  {% if post.image %}<a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy"></a>{% endif %}
+  <div class="body">
+    <time>{{ post.date | date: "%d %B %Y" }}</time>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p>{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
+    <a class="more" href="{{ post.url | relative_url }}">Read more</a>
+  </div>
+</article>
+{% endfor %}
+{% if paginator.total_pages > 1 %}
+<nav class="pager">
+  {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>{% endif %}
+  <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>{% endif %}
+</nav>
+{% endif %}

@@ -1,0 +1,29 @@
+:root{--bg:#f4f8f7;--card:#fff;--ink:#0c2f3a;--muted:#55727a;--line:#d3e3e0;--brand:#0c3b4a;--sun:#f2b84b;--link:#13727f;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#071e26;--card:#0d2d38;--ink:#e4f1ef;--muted:#9bb9bd;--line:#1d4350;--brand:#04141a;--link:#6cc5cf;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.7 "Figtree","Segoe UI",system-ui,sans-serif}
+h1,h2{font-family:"Bricolage Grotesque","Trebuchet MS",sans-serif;line-height:1.15}
+a{color:var(--link)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.top{background:var(--brand);color:#eaf6f4}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.top a{color:#eaf6f4;text-decoration:none;font-weight:600}
+.brand{font:800 1.25rem "Bricolage Grotesque",sans-serif}
+nav a{margin-left:20px;font-size:.95rem}
+.lead{font-size:clamp(1.6rem,4.5vw,2.3rem);margin:40px 0 28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:24px}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card .body{padding:18px 20px 22px}
+.card h2{margin:4px 0 8px;font-size:1.5rem}
+.card h2 a{color:var(--ink);text-decoration:none}
+.card p{margin:0 0 10px;color:var(--muted)}
+time{font-size:.85rem;color:var(--muted)}
+.more{font-weight:600}
+.pager{display:flex;justify-content:space-between;align-items:center;margin:30px 0;color:var(--muted)}
+.post{margin-top:36px}
+.post h1{font-size:clamp(1.9rem,5vw,2.8rem);margin:6px 0 10px}
+.tags span{display:inline-block;background:var(--sun);color:#3a2600;font-size:.8rem;font-weight:600;padding:2px 10px;border-radius:99px;margin-right:6px}
+.cover{width:100%;border-radius:14px;margin:18px 0}
+.content img{max-width:100%;height:auto;border-radius:10px}
+.comments{margin:48px 0;padding-top:24px;border-top:1px solid var(--line)}
+footer{padding:30px 0;color:var(--muted);font-size:.9rem;text-align:center}

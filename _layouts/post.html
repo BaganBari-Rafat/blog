@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="post">
+  <header>
+    <time>{{ page.date | date: "%d %B %Y" }}</time>
+    <h1>{{ page.title }}</h1>
+    {% if page.tags.size > 0 %}<p class="tags">{% for t in page.tags %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
+  </header>
+  {% if page.image %}<img class="cover" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">{% endif %}
+  {% capture from %}src="/assets/{% endcapture %}
+  {% capture to %}src="{{ '/assets/' | relative_url }}{% endcapture %}
+  <div class="content">{{ content | replace: from, to }}</div>
+</article>
+{% if site.giscus.repo_id != "" %}
+<section class="comments">
+  <h2>Comments and reviews</h2>
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ site.giscus.repo }}" data-repo-id="{{ site.giscus.repo_id }}"
+    data-category="{{ site.giscus.category }}" data-category-id="{{ site.giscus.category_id }}"
+    data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0"
+    data-input-position="top" data-theme="preferred_color_scheme" data-lang="en"
+    crossorigin="anonymous" async></script>
+</section>
+{% endif %}
