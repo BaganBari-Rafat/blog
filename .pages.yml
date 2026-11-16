@@ -1,0 +1,36 @@
+media:
+  input: assets/images
+  output: /assets/images
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+    fields:
+      - name: layout
+        label: Layout (leave as post)
+        type: string
+        default: post
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Date
+        type: date
+      - name: image
+        label: Cover image
+        type: image
+      - name: description
+        label: Short summary
+        type: text
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: body
+        label: Post
+        type: rich-text
