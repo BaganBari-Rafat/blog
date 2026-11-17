@@ -10,8 +10,4 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-giscus:
-  repo: "BaganBari-Rafat/blog"
-  repo_id: "R_kgDOVwW3zw"
-  category: "Announcements"
-  category_id: "DIC_kwDOVwW3z84DLTru"
+comments_api: "PASTE_YOUR_WEB_APP_URL_HERE"
