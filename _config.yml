@@ -10,4 +10,4 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-comments_api: "PASTE_YOUR_WEB_APP_URL_HERE"
+comments_api: "https://script.google.com/macros/s/AKfycbyVXLNVWeY9TjT6H6y1vZp-fBVdvO0vKD7Xz2aArrMwutk3QKwW5fGBmM1ezu41ypDXlg/exec"
