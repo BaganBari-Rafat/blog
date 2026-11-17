@@ -11,7 +11,7 @@ plugins:
   - jekyll-paginate
 
 # Comments (Giscus). Fill these 3 values after setup, see steps. Leave empty to hide comments.
-  giscus:
+ giscus:
   repo: "BaganBari-Rafat/blog"
   repo_id: "R_kgDOVwW3zw"
   category: "Announcements"
