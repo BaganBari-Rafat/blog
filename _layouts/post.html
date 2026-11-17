@@ -12,14 +12,31 @@ layout: default
   {% capture to %}src="{{ '/assets/' | relative_url }}{% endcapture %}
   <div class="content">{{ content | replace: from, to }}</div>
 </article>
-{% if site.giscus.repo_id != "" %}
-<section class="comments">
-  <h2>Comments and reviews</h2>
-  <script src="https://giscus.app/client.js"
-    data-repo="{{ site.giscus.repo }}" data-repo-id="{{ site.giscus.repo_id }}"
-    data-category="{{ site.giscus.category }}" data-category-id="{{ site.giscus.category_id }}"
-    data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0"
-    data-input-position="top" data-theme="preferred_color_scheme" data-lang="en"
-    crossorigin="anonymous" async></script>
+{% if site.comments_api and site.comments_api != "" %}
+<section class="comments" id="comments" data-post="{{ page.url }}" data-api="{{ site.comments_api }}">
+  <h2>Likes and comments</h2>
+  <div class="reactrow">
+    <button id="likeBtn" class="likebtn" type="button" aria-pressed="false">&#128077; Like <span id="likeCount">0</span></button>
+    <span id="avg" class="avg"></span>
+  </div>
+  <form id="cf" class="cform">
+    <label>Your name <input name="name" required maxlength="60" autocomplete="name"></label>
+    <label>Rating (optional)
+      <select name="stars">
+        <option value="0">No rating</option>
+        <option value="5">5 stars: excellent</option>
+        <option value="4">4 stars: good</option>
+        <option value="3">3 stars: okay</option>
+        <option value="2">2 stars: poor</option>
+        <option value="1">1 star: bad</option>
+      </select>
+    </label>
+    <label>Your comment <textarea name="text" rows="4" required maxlength="1000"></textarea></label>
+    <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+    <button class="btn" type="submit">Post comment</button>
+    <p id="cmsg" role="status"></p>
+  </form>
+  <div id="clist" class="clist"></div>
 </section>
+<script src="{{ '/assets/js/comments.js' | relative_url }}"></script>
 {% endif %}
