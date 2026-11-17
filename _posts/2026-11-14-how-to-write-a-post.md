@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to write a new post
+title: My Dream – Bagan Bari
 date: 2026-11-16
 image: /assets/images/WhatsApp Image 2026-11-16 at 11.54.44 PM.jpeg
 description: I have a special interest in developing a beautiful garden retreat,
